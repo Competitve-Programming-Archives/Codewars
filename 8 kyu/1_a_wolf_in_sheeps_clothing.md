@@ -22,9 +22,7 @@ warnTheSheep(["sheep", "sheep", "wolf"]) === "Pls go away and stop eating my she
 ## Solution
 
 ```javascript
-function warnTheSheep(queue) {
-  return queue[queue.length - 1] === "wolf" ?
+const warnTheSheep = queue => queue[queue.length - 1] === "wolf" ?
   "Pls go away and stop eating my sheep" :
   `Oi! Sheep number ${queue.length - (queue.indexOf("wolf") + 1)}! You are about to be eaten by a wolf!`;
-}
 ```
